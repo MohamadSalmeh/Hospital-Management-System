@@ -1,0 +1,43 @@
+@startuml
+annotation java.lang.Override
+class homework.ContactedDoctor
+class homework.Date
+class homework.Doctors
+class homework.ExternalPatient
+class homework.ExternalTreatment
+class homework.Homework
+class homework.InternalDoctor
+class homework.InternalPatient
+class homework.InternalTreatment
+class homework.Patient
+class homework.TrainingDoctor
+class homework.Treatment
+class java.time.LocalDate
+class java.time.temporal.ChronoUnit
+class java.util.ArrayList
+class java.util.Scanner
+class sun.security.x509.SerialNumber
+homework.ContactedDoctor ..> java.lang.Override
+homework.ContactedDoctor --|> homework.Doctors
+homework.Date ..> java.time.LocalDate
+homework.Date ..> java.time.temporal.ChronoUnit
+homework.ExternalPatient ..> java.lang.Override
+homework.ExternalPatient --|> homework.Patient
+homework.ExternalPatient ..> java.util.Scanner
+homework.ExternalTreatment ..> homework.Homework
+homework.ExternalTreatment --|> homework.Treatment
+homework.ExternalTreatment ..> java.util.ArrayList
+homework.InternalDoctor ..> java.lang.Override
+homework.InternalDoctor --|> homework.Doctors
+homework.InternalDoctor ..> sun.security.x509.SerialNumber
+homework.InternalPatient ..> java.lang.Override
+homework.InternalPatient --|> homework.Patient
+homework.InternalPatient ..> java.util.ArrayList
+homework.InternalPatient ..> java.util.Scanner
+homework.InternalTreatment ..> homework.Homework
+homework.InternalTreatment --|> homework.Treatment
+homework.Patient --|> homework.Treatment
+homework.TrainingDoctor ..> java.lang.Override
+homework.TrainingDoctor --|> homework.Doctors
+homework.Treatment ..> java.util.ArrayList
+@enduml
